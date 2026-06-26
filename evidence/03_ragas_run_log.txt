@@ -1,0 +1,32 @@
+============================================================
+  Bước 3: RAGAS Evaluation
+============================================================
+Config OK | Provider: OPENAI | Project: day22-lab
+FAISS vectorstore đã sẵn sàng.
+
+Đã chạy 50 câu hỏi với prompt v1.
+Đã chạy 50 câu hỏi với prompt v2.
+
+Kết quả RAGAS - Prompt V1:
+  faithfulness                  : 0.9645
+  answer_relevancy              : 0.9127
+  context_recall                : 1.0000
+  context_precision             : 0.9450
+
+Kết quả RAGAS - Prompt V2:
+  faithfulness                  : 0.9426
+  answer_relevancy              : 0.8895
+  context_recall                : 1.0000
+  context_precision             : 0.9417
+
+=================================================================
+  Metric                                V1        V2  Winner
+=================================================================
+  faithfulness                        0.9645    0.9426  <- V1
+  answer_relevancy                    0.9127    0.8895  <- V1
+  context_recall                      1.0000    1.0000  <- Tie
+  context_precision                   0.9450    0.9417  <- V1
+
+Đạt mục tiêu: faithfulness = 0.9645 >= 0.8
+Đã lưu báo cáo vào P:\AILab\2A202600763_NguyenThaiBao_Day22-Track2-LLMops-Prompt-versioning\data\ragas_report.json
+Đã sao chép báo cáo vào evidence\03_ragas_report.json
